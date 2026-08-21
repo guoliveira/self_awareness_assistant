@@ -1,26 +1,22 @@
-# self_awareness_assistant
+# Self-Awareness Assistant
 This is your friendly assistant for self-awareness, which is a RAG app built as part of the LLM- Zoomcamp
-
-## Running it 
-We use pipenv for managing dependecies and Python 3.12.
-
-Make sure you have pipenv installed. If not then :
-
-```bash
-pip install pipenv
-```
-
 
 
 # Self-Awareness Assistant
 
 ## Problem Description
 
-Emotional intelligence (EI) plays an important role in how people understand themselves, manage their emotions, and interact with others. One of its fundamental components is **self-awareness** — the ability to recognize what we are feeling, understand the reasons behind those feelings, and identify how our emotions may influence our thoughts, decisions, and behavior.
+Emotional intelligence (EI) plays an important role in how people understand themselves, manage their emotions, and interact with others. 
+
+One of its fundamental components is **self-awareness** — the ability to recognize what we are feeling, understand the reasons behind those feelings, and identify how our emotions may influence our thoughts, decisions, and behavior.
 
 However, developing self-awareness is not always easy. 
 
-People may experience emotions such as stress, frustration, anxiety, or uncertainty without fully understanding where those feelings come from or how they affect their actions. Although there is a large amount of information available about emotional intelligence, finding relevant and practical guidance for a specific situation can be difficult. Traditional search engines may return large amounts of information without providing a focused answer to the user's question.
+People may experience emotions such as stress, frustration, anxiety, or uncertainty without fully understanding where those feelings come from or how they affect their actions. 
+
+Although there is a large amount of information available about emotional intelligence, finding relevant and practical guidance for a specific situation can be difficult. 
+
+Traditional search engines may return large amounts of information without providing a focused answer to the user's question.
 
 The **Self-Awareness Assistant** aims to address this problem by providing an interactive way for users to explore and improve their self-awareness. 
 
@@ -43,6 +39,8 @@ The goal of the project is therefore to build a focused conversational assistant
 ## Data
 
 The knowledge base contains **100 question-and-answer pairs** related to emotional intelligence, with a particular focus on self-awareness.
+
+These question were developed based on the authors Paulo Moreira and Daniel Goleman.
 
 Each record contains three main fields:
 
