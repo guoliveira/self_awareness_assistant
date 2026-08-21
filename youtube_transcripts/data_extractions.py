@@ -30,37 +30,6 @@ def fetch_transcript(video_id: str, languages: list[str]):
     )
 
 
-def save_raw_json(video_id: str, transcript, output_dir: Path):
-    """
-    Save the original transcript including timestamps.
-    """
-    output_dir.mkdir(parents=True, exist_ok=True)
-
-    data = {
-        "video_id": video_id,
-        "language": "pt",
-        "transcript": [
-            {
-                "start": snippet.start,
-                "duration": snippet.duration,
-                "text": snippet.text
-            }
-            for snippet in transcript
-        ]
-    }
-
-    output_file = output_dir / f"{video_id}_raw.json"
-
-    with open(output_file, "w", encoding="utf-8") as f:
-        json.dump(
-            data,
-            f,
-            ensure_ascii=False,
-            indent=2
-        )
-
-    return output_file
-
 
 def save_raw_txt(video_id: str, transcript, output_dir: Path):
     """
@@ -114,12 +83,6 @@ def main():
 
         print(f"Transcript retrieved: {len(transcript)} snippets")
 
-        json_file = save_raw_json(
-            VIDEO_ID,
-            transcript,
-            OUTPUT_DIR
-        )
-
         txt_file = save_raw_txt(
             VIDEO_ID,
             transcript,
@@ -133,7 +96,6 @@ def main():
         )
 
         print("\nFiles created:")
-        print(f"  JSON:       {json_file}")
         print(f"  TXT:        {txt_file}")
         print(f"  Continuous: {continuous_file}")
 
