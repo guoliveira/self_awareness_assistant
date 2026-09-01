@@ -14,5 +14,5 @@ def build_index(documents):
 def get_transcripts_dataframe():
     file_path = "youtube_transcripts/dataset.json"
     df = pd.read_json(file_path)
-    
+    df.insert(0, 'id', df.index)
     return df.to_dict(orient='records')
