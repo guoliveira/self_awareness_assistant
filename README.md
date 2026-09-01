@@ -36,11 +36,11 @@ This allows the assistant to provide responses grounded in the project's curated
 
 The goal of the project is therefore to build a focused conversational assistant that helps users **learn about self-awareness, understand their emotions, and explore practical ways to develop greater self-awareness**.
 
-## Data
+## Dataset and Ingestion
 
 The knowledge base contains **100 question-and-answer pairs** related to emotional intelligence, with a particular focus on self-awareness.
 
-These question were developed based on the authors Paulo Moreira and Daniel Goleman.
+These question were developed based on the videos of the authors Paulo Moreira and Daniel Goleman.
 
 Each record contains three main fields:
 
@@ -50,3 +50,45 @@ Each record contains three main fields:
   "answer": "Recognizing your feelings helps you understand how they may be influencing your judgment and choices.",
   "video_id": "BqF50IuR3_c"
 }
+```
+
+This dataset was created with ChatGPT from the transcript of the Youtube videos.
+
+For this creation it was used the following prompt
+```
+Based on these five generated Transcripts of a Youtube video  regarding self-awareness please generate 100 questions and answers in English (if it is in Portuguese translate to Englishe) for self-awareness.
+I want a json file with "question" , "answer", "video_id" . I want the dataset to be strictly grounded only in the video transcripts
+```
+
+## Running it
+
+We use `pipenv` for managing dependecies and Python 3.12.
+
+If you need to install `pipenv` run the following bash command on the terminal
+
+```bash
+pip install pipenv
+```
+
+To install dependecies run: 
+```bash
+pipenv install
+```
+
+For development purposes run:
+```bash
+pipenv run jupyter notebook
+```
+
+
+## Evaluation
+
+### Retrievel 
+
+
+## RAG Flow 
+
+## Monitoring 
+
+
+
