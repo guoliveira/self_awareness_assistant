@@ -83,7 +83,8 @@ pipenv run jupyter notebook
 
 ## Evaluation
 
-For code evaluation system you can check [development.ipynb]()
+The ground truth was generated with the [notebook](evaluation_generation.ipynb) and saved in the [csv file](data/ground_truth.csv)
+For code evaluation system you can check [notebook](development2.ipynb)
 
 ### Retrievel 
 
